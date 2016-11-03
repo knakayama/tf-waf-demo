@@ -1,0 +1,5 @@
+secrets.tfvars
+.terraform
+*tfstate*
+keys/*
+!keys/.gitkeep

@@ -1,0 +1,13 @@
+#cloud-config
+repo_update: true
+repo_upgrade: all
+
+packages:
+  - tcpdump
+  - nginx
+
+runcmd:
+  - cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+  - uname -n > /usr/share/nginx/html/index.html
+  - service nginx start
+  - chkconfig nginx on
